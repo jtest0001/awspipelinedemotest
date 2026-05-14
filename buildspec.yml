@@ -5,10 +5,15 @@ phases:
     runtime-versions:
       nodejs: 22
     commands:
-      - npm install
+      - echo Installing packages...
+      - npm ci
 
   build:
     commands:
+      - echo Running tests...
+      - npm run test
+
+      - echo Building app...
       - npm run build
 
   post_build:
