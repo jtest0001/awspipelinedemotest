@@ -10,14 +10,8 @@ phases:
 
   build:
     commands:
-      - echo Running tests...
       - npm run test
-
-      - echo Building app...
       - npm run build
-
-  post_build:
-    commands:
       - aws cloudfront create-invalidation --distribution-id ETNZHWJMVWPQA --paths "/*"
 
 artifacts:
