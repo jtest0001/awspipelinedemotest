@@ -7,10 +7,12 @@ phases:
     commands:
       - echo Installing packages...
       - npm ci
+      - npm install -g sonar-scanner
 
   build:
     commands:
       - npm run test
+      - sonar-scanner -Dsonar.token=$SONAR_TOKEN
       - npm run build
       - aws cloudfront create-invalidation --distribution-id ETNZHWJMVWPQA --paths "/*"
 
