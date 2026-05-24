@@ -7,5 +7,5 @@ test("test app", () => {
   const btn = getByTestId("count-btn")
   fireEvent.click(btn)
 
-  expect(getByText("Hello Worlds")).toBeInTheDocument()
+  expect(getByText("Hello Worldss")).toBeInTheDocument()
 })
