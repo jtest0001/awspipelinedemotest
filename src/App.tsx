@@ -9,7 +9,6 @@ function App() {
 
   return (
     <>
-      {count === 2 && <div>Test</div>}
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
